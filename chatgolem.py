@@ -26,7 +26,7 @@ def chatgolem():
         return jsonify({'error': 'Invalid request payload'}), 400
 
     # Retrieve the OpenAI API key set as an environment variable
-    openai_api_key = 'sk-proj-AanORnkr6V4F7PJudeXUT3BlbkFJmcLnXGzj3KeB2LogmuXf'
+    openai_api_key = os.getenv('openai_api_key')
     if not openai_api_key:
         print('OpenAI API key not found')
         return jsonify({'error': 'OpenAI API key not found'}), 500
