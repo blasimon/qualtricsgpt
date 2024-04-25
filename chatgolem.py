@@ -27,6 +27,7 @@ def chatgolem():
 
     # Retrieve the OpenAI API key set as an environment variable
     openai_api_key = os.getenv('openai_api_key')
+    print("OpenAI API Key:", openai_api_key)
     if not openai_api_key:
         print('OpenAI API key not found')
         return jsonify({'error': 'OpenAI API key not found'}), 500
